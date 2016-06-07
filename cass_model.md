@@ -112,3 +112,84 @@ Twitter Sample Data
 
 
 
+
+Google Coumns
+
+ "kind": "plus#person",
+  "urls":
+  "id"
+ "displayName"
+ "tagline"
+ "aboutMe"
+ "url"
+ "image"
+ "isPlusUser"
+ "plusOneCount"
+ "circledByCount"
+  "verified"
+ "cover"
+
+
+
+
+Google Coumns Sample Data
+
+{
+ "kind": "plus#person",
+  "urls": [
+  {
+   "value": "http://www.android.com",
+   "type": "website",
+   "label": "www.android.com"
+  },
+  {
+   "value": "http://www.android.com/",
+   "type": "other",
+   "label": "Android"
+  },
+  {
+   "value": "http://youtube.com/android",
+   "type": "other",
+   "label": "Android YouTube"
+  },
+  {
+   "value": "http://officialandroid.blogspot.com/",
+   "type": "other",
+   "label": "Official Android Blog"
+  },
+  {
+   "value": "http://www.google.com/nexus/",
+   "type": "other",
+   "label": "Nexus"
+  },
+  {
+   "value": "http://www.youtube.com/googlenexus",
+   "type": "other",
+   "label": "Nexus YouTube"
+  }
+ ],
+ 
+ "id": "104629412415657030658",
+ "displayName": "Android",
+ "tagline": "A place for Android fans everywhere to meet, share and get the latest on all things Android.",
+ "aboutMe": "Android is an open source mobile operating system from Google. It runs on smartphones like Nexus 5, tablets like Nexus 7, and everything from netbooks to cars.",
+ "url": "https://plus.google.com/+android",
+ "image": {
+  "url": "https://lh3.googleusercontent.com/-tUnSh4hL1b0/AAAAAAAAAAI/AAAAAAAA2LI/UjgQaKCKoy8/photo.jpg?sz=50",
+  "isDefault": false
+ },
+ "isPlusUser": true,
+ "plusOneCount": 15629401,
+ "circledByCount": 12750410,
+ "verified": true,
+ "cover": {
+  "layout": "banner",
+  "coverPhoto": {
+   "url": "https://lh3.googleusercontent.com/MCdXPnmfVmznlKc5s7CltATVga9bk6NHoSRbPCfwWV1wshpfExXL_MfOl145ZqW__MFTrkU91A=s630-fcrop64=1,006c0000ffffff3e",
+   "height": 530,
+   "width": 940
+  },
+
+ }
+}
+
