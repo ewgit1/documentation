@@ -90,7 +90,7 @@ Twitter Colums
       
 Twitter Sample Data
 
-      [
+      
    {
       
       "id_str":"557581198",
@@ -107,14 +107,14 @@ Twitter Sample Data
       "profile_image_url_https":"https://pbs.twimg.com/profile_images/486825755930664960/YYJQv3OD_normal.jpeg"
     
    }
-]
+
 
 
 
 
 
 Google Coumns
-
+```
  "kind": "plus#person",
   "urls":
   "id"
@@ -129,11 +129,11 @@ Google Coumns
   "verified"
  "cover"
 
-
+```
 
 
 Google Coumns Sample Data
-
+```
 {
  "kind": "plus#person",
   "urls": [
@@ -192,4 +192,4 @@ Google Coumns Sample Data
 
  }
 }
-
+```
