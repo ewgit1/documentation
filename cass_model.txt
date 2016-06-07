@@ -20,7 +20,7 @@ Register
 
 Upsert
 
-UserID (emaild) 
+```UserID (emaild) 
 PAssword (hash password)
 isActive 'T' OR fALSE  (BOOLEAN) 
 Phone Numnber
@@ -69,7 +69,7 @@ timezone
 updated_time
 verified
 website
-work
+work```
 
 
 
