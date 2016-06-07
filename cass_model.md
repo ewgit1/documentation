@@ -73,6 +73,41 @@ website
 work
 ```
 
+Twitter Colums 
+
+      "id"
+      "name"
+      "screen_name"
+      "location"
+      "description"
+      "followers_count"
+      "friends_count"
+      "time_zone"
+      "verified"
+      "lang"
+      "profile_image_url"
+      "profile_image_url_https"
+      
+Twitter Sample Data
+
+      [
+   {
+      
+      "id_str":"557581198",
+      "name":"Sarju Hansaliya",
+      "screen_name":"SarjuHansaliya",
+      "location":"",
+      "description":"",
+      "followers_count":39,
+      "friends_count":51,
+      "time_zone":"Pacific Time (US & Canada)",
+      "verified":false,
+      "lang":"en",
+      "profile_image_url":"http://pbs.twimg.com/profile_images/486825755930664960/YYJQv3OD_normal.jpeg",
+      "profile_image_url_https":"https://pbs.twimg.com/profile_images/486825755930664960/YYJQv3OD_normal.jpeg"
+    
+   }
+]
 
 
 
