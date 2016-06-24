@@ -1,0 +1,229 @@
+																	
+																	
+																	Groups Chat metadata is stored in table 
+																	
+																	vt_grp_chat_md
+																	
+																	Group ID timeuuid
+																	Group Name
+																	Group Owner
+																	group members : Map
+																	
+																	When new group is created by user then 
+																	
+																	Group Metadata will be insertted into 2 tables
+																	
+																	vt_grp_chat_md
+																	vt_frs_chat_ts
+																	vt_usr_short
+																	
+																	For example user sarju created a group  , let say with 2 people (jeevan, vbyt) then
+																	
+																	Following info will be entered into vt_grp_chat_md
+																	
+																	groupid : timeuuid
+																	group name : given by sarju at creation time
+																	group owner : sarju id (get this automatically from his login info)
+																	group memnbers will  be map with id and join date time 
+																	
+																	{jeevan:date time , vbyt:date time }
+																	
+																	create table vt_usr_short
+																	(
+																	user_id  text,  //group id
+																	diaplay_name  text,  // group name
+																	user_email text,  // group id
+																	pic50 text,  // pic
+																	PRIMARY KEY (user_id)
+																	);
+																	
+																	
+																	
+																	
+																	
+																	Following info will be entered into vt_frs_chat_ts.
+																	
+																	Show Friens List
+																	
+																	Here we show friends and Groups he is member of
+																	
+																	Table : vt_frs_chat_ts
+																	
+																	create table vt_frs_chat_ts
+																	(
+																	user_id  text,
+																	typ  text,  // fr , grp
+																	fr_id text,  // friend id or group id
+																	last_talked  timestamp, // last taled to friend or group
+																	PRIMARY KEY ((user_id), fr_id, last_talked)
+																	);
+																	
+																	insert into vt_frs_chat_ts(user_id,fr_id,last_talked) values('jeevan@filmsmiles.com','Maths'
+																	
+																	
+																	As 3 people are there in group , 3 records will be inserted .
+																	
+																	user_id  :  sarju
+																	fr_id : group id
+																	last_talked : date group created or last talked in that group
+																	
+																	user_id  :  jeevan
+																	fr_id : group id
+																	last_talked : date group created or last talked in that group
+																	
+																	
+																	user_id  :  vbydt
+																	fr_id : group id
+																	last_talked : date group created or last talked in that group
+																	
+																	
+																	when new member is added to group later ...
+																	
+																	This info will be addded into vt_grp_chat_md
+																	
+																	and vt_frs_chat_ts
+																	
+																	---------------------------------------------------------------------------------------------
+																	
+																	
+																	
+																	Data added to below table
+																	
+																	
+																	
+																	create table vt_frs_chat_m
+																	(
+																	user_id text,
+																	fr_id text,
+																	comb_id text,
+																	PRIMARY KEY ((user_id, fr_id))
+																	) ;
+																	
+																	
+																	insert into vt_frs_chat_ts(user_id,fr_id,last_talked) values('jeevan@filmsmiles.com','Maths'
+																	
+																	
+																	As 3 people are there in group , 3 records will be inserted .
+																	
+																	user_id  :  sarju
+																	fr_id : group id
+																	last_talked : date group created or last talked in that group
+																	
+																	user_id  :  jeevan
+																	fr_id : group id
+																	last_talked : date group created or last talked in that group
+																	
+																	
+																	user_id  :  vbydt
+																	fr_id : group id
+																	last_talked : date group created or last talked in that group
+																	
+																	
+																	table vt_frs_chat_m
+																	
+																	create table vt_frs_chat_m
+																	(
+																	user_id text,
+																	fr_id text,
+																	typ : usr, grp
+																	usr_join_tm 
+																	comb_id text,  // group id or hash
+																	
+																	PRIMARY KEY ((user_id, fr_id))
+																	) ;
+																	
+																	
+																	vt_grp_chat_md
+																	
+																	Group ID timeuuid
+																	Group Name
+																	Group Owner
+																	group members : Map
+																	
+																	vt_usr_short_m
+																	
+																	user_id  text,  //group id
+																	diaplay_name  text,  // group name
+																	user_email text,  // group id
+																	typ :  usr , grp
+																	pic50 text,  // pic
+										
+																	
+																	
+																	
+																	vt_frs_chat_m
+																	user_id text,
+																	fr_id text,
+																	comb_id text,
+																	
+																
+																	vt_frs_chat_ts
+																	
+																	user_id  text,
+																	fr_id text,
+																	typ : usr , grp
+																	last_talked  timestamp,
+																	
+																	To show the friends list we need 2 tables : vt_frs_chat_ts , vt_usr_short_m
+																	
+																	
+																	
+																	Create Group 
+																	
+																		vt_grp_chat_md ( 1 entry)
+																	
+																	 vt_frs_chat_m ( no of people entry)
+																	
+																	vt_usr_short_m ( 1 entry)
+																	
+																	vt_frs_chat_ts (  no of people   entry)
+																	
+																	
+																	New Member Added 
+																	vt_grp_chat_md ( 1 entry) updated 
+																	
+																	 vt_frs_chat_m ( no of people entry) added
+																	
+																	vt_usr_short_m ( 1 entry) no change
+																	
+																	vt_frs_chat_ts (  no of people   entry) added
+																	
+																	
+																	
+																	insert message
+																	
+																	
+																create table vt_frs_chat_d
+																(
+																msg_id timeuuid,
+																frm_usr text,
+																comb_id text, /hash or group id 
+																msg text,
+																msg_ts   timestamp,
+																PRIMARY KEY ((comb_id),msg_ts,msg_id)
+																) WITH CLUSTERING ORDER BY (msg_ts DESC);
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	
+																	

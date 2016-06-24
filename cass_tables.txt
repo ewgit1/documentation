@@ -1,0 +1,60 @@
+
+drop table vt_frs_chat_ts;
+
+create table vt_frs_chat_ts
+(
+user_id  text,
+fr_id text,
+last_talked  timestamp,
+PRIMARY KEY ((user_id), fr_id, last_talked)
+);
+
+drop table vt_usr_short;
+
+create table vt_usr_short
+(
+user_id  text,
+diaplay_name  text,
+user_email text,
+pic50 text,
+PRIMARY KEY (user_id)
+);
+
+
+drop table vt_frs_chat_m;
+
+create table vt_frs_chat_m
+(
+user_id text,
+fr_id text,
+comb_id text,
+PRIMARY KEY ((user_id, fr_id))
+) ;
+
+
+create table vt_frs_chat_m
+(
+user_id text,
+fr_id text,
+user_join_tm 
+comb_id text,
+
+PRIMARY KEY ((user_id, fr_id))
+) ;
+
+
+drop table vt_frs_chat_d;
+
+create table vt_frs_chat_d
+(
+msg_id timeuuid,
+comb_id text,
+msg text,
+msg_ts   timestamp,
+PRIMARY KEY ((comb_id),msg_ts,msg_id)
+) WITH CLUSTERING ORDER BY (msg_ts DESC);
+
+
+
+
+
