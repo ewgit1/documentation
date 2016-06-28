@@ -1,4 +1,10 @@
 
+
+
+apt-get install imagemagick
+
+
+
 drop table vt_frs_chat_ts;
 
 create table vt_frs_chat_ts
