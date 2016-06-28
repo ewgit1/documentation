@@ -5,6 +5,7 @@ create table vt_frs_chat_ts
 (
 user_id  text,
 fr_id text,
+typ text,
 last_talked  timestamp,
 PRIMARY KEY ((user_id), fr_id, last_talked)
 );
@@ -14,8 +15,9 @@ drop table vt_usr_short;
 create table vt_usr_short
 (
 user_id  text,
-diaplay_name  text,
+display_name  text,
 user_email text,
+typ text,
 pic50 text,
 PRIMARY KEY (user_id)
 );
@@ -28,19 +30,10 @@ create table vt_frs_chat_m
 user_id text,
 fr_id text,
 comb_id text,
+typ text,
 PRIMARY KEY ((user_id, fr_id))
 ) ;
 
-
-create table vt_frs_chat_m
-(
-user_id text,
-fr_id text,
-user_join_tm 
-comb_id text,
-
-PRIMARY KEY ((user_id, fr_id))
-) ;
 
 
 drop table vt_frs_chat_d;
@@ -53,6 +46,18 @@ msg text,
 msg_ts   timestamp,
 PRIMARY KEY ((comb_id),msg_ts,msg_id)
 ) WITH CLUSTERING ORDER BY (msg_ts DESC);
+
+
+ create  table vt_grp_chat_md
+ (
+ grp_id text,
+ grp_nm text,
+ grp_own text,
+ grp_mem map<text,timestamp>,
+ created_dt timestamp,
+ primary key(grp_id)
+  ) ;
+  
 
 
 
