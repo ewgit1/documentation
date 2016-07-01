@@ -1,0 +1,39 @@
+create table vt_usr_reg
+(
+usr_id  text primary key,
+usr_email text ,
+usr_ph text,
+dsp_nm text,
+reg_dt timestamp
+);
+
+create table vt_usr_reg_otp
+(
+usr_id  text primary key ,
+usr_email text ,
+usr_ph text,
+otp  text ,
+otp_exp_tm int,
+otp_snt_dt timestamp
+);
+
+create table vt_usr_email_ph
+(
+ver_email_ph text primary key,
+user_id  text
+);
+
+create table vt_usr_lgn
+(
+usr_id      text primary key,
+dsp_nm text,
+pwd  text,
+is_act text,
+crt_dt timestamp
+);
+
+
+
+
+
+
