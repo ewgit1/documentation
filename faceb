@@ -18,14 +18,14 @@ PRIMARY KEY ((usr_id),pst_dt,pst_id)
 ) WITH CLUSTERING ORDER BY (pst_dt DESC,pst_id desc);
 
 
-/*
-vt_usr_posts
-pst_id
-pst_dt
-pst_msg
-pst_img
-pst_vid
-*/
+
+create table vt_usr_posts
+(
+pst_id  uuid,
+usr_id text,
+pst_dt timestamp,
+primary key((usr_id),pst_dt,pst_id)
+) WITH CLUSTERING ORDER BY (pst_dt DESC,pst_id desc);
 
 create table vt_posts
 (
