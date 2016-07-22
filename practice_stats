@@ -12,6 +12,7 @@ que_end_tm timestamp,
 no_of_clks int,
 revu boolean,
 lrn  boolean,
+skip boolean,
 wrg_rsn set<text>,
 que_diff text,
 PRIMARY KEY ((usr_id),que_id,que_strt_tm)
