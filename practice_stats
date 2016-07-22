@@ -1,0 +1,18 @@
+create  table vt_usr_prtc_stat
+(
+usr_id text,
+que_id text,
+tpc_id text,
+mdl_id text,
+crs_id text,
+que_ans MAP<text,boolean>,
+que_ans_tm MAP<text,int>,
+que_strt_tm timestamp,
+que_end_tm timestamp,
+no_of_clks int,
+revu boolean,
+lrn  boolean,
+wrg_rsn set<text>,
+que_diff text,
+PRIMARY KEY ((usr_id),que_id)
+)
