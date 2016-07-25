@@ -21,7 +21,7 @@ PRIMARY KEY ((usr_id),que_id,que_strt_tm)
 create  table vt_usr_created_tsts
 (
 usr_id text,
-que_book_id MAP<text,text>,
+que_book_id text,
 crt_dt timestamp,
 tst_nm text,
 tst_id text,
