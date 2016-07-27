@@ -27,3 +27,18 @@ tst_nm text,
 tst_id text,
 PRIMARY KEY ((usr_id),tst_id)
 );
+
+
+
+create  table vt_vw_tsts
+(
+usr_id text,
+que_book_id text,
+crt_dt timestamp,
+tst_nm text,
+tst_id text,
+PRIMARY KEY (tst_id)
+);
+
+
+
