@@ -1,0 +1,11 @@
+
+create table vt_forum_qrys
+(
+qry_id uuid,
+usr_id text ,
+qry_title text,
+qry_txt text,
+qry_ts timestamp,
+qry_tags SET<text>,
+PRIMARY KEY (qry_id)
+)
