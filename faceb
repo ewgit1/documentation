@@ -9,7 +9,16 @@ fr_id  set<text>,
 PRIMARY KEY (usr_id)
 );
 
-create table vt_user_posts
+
+create table vt_my_posts
+(
+usr_id text,
+pst_id uuid,
+pst_dt timestamp,
+PRIMARY KEY ((usr_id),pst_dt,pst_id)
+) WITH CLUSTERING ORDER BY (pst_dt DESC,pst_id desc);
+
+create table vt_frs_posts
 (
 usr_id text,
 pst_id uuid,
