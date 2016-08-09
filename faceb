@@ -7,7 +7,7 @@ create table vt_user_frs
 usr_id     text,
 fr_id  set<text>,
 PRIMARY KEY (usr_id)
-)
+);
 
 create table vt_user_posts
 (
