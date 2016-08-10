@@ -24,3 +24,22 @@ cmnt_ts timestamp,
 PRIMARY KEY((pst_id),cmnt_ts ,cmnt_id)
 );
 
+create table vt_qry_trend
+(
+qry_id uuid primary key,
+vw_cnt  counter
+);
+
+create table vt_qry_vws
+(
+qry_id uuid primary key,
+usr_id text ,
+vw_ts timestamp
+);
+
+
+
+
+
+
+
