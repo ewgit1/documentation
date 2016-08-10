@@ -26,15 +26,19 @@ PRIMARY KEY((pst_id),cmnt_ts ,cmnt_id)
 
 create table vt_qry_trend
 (
-qry_id uuid primary key,
-vw_cnt  counter
-);
+qry_id uuid ,
+vw_cnt  counter,
+primary key ((qry_id) , vw_cnt)
+)  WITH CLUSTERING ORDER BY (vw_cnt desc);
+
+
 
 create table vt_qry_vws
 (
-qry_id uuid primary key,
+qry_id uuid ,
 usr_id text ,
-vw_ts timestamp
+vw_ts timestamp,
+primary key (qry_id,usr_id,vw_ts)
 );
 
 
