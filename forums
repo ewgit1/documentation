@@ -8,4 +8,19 @@ qry_txt text,
 qry_ts timestamp,
 qry_tags SET<text>,
 PRIMARY KEY (qry_id)
-)
+);
+
+create table vt_usr_comnt_lvl0(
+pst_id 		uuid,
+usr_id 		text,
+cmnt_id 	uuid,
+cmnt_txt text,
+cmnt_img  SET<text>,
+cmnt_atch  SET<text>,
+cmnt_vid  SET<text>,
+cmnt_lvl  text,
+cmnt_cmnt_id uuid,
+cmnt_ts timestamp,
+PRIMARY KEY((pst_id),cmnt_ts ,cmnt_id)
+);
+
