@@ -65,9 +65,11 @@ primary key(qry_id,usr_id),cmnt_id)
 
 create table vt_qry_like_stats
 (
-cmnt_id uuid primary key,
+qry_id uuid,
+cmnt_id uuid ,
 like_cnt counter,
-dlike_cnt counter
+dlike_cnt counter,
+primary key (qry_id,cmnt_id)
 );
 
 
