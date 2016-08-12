@@ -8,6 +8,31 @@ usr_id     text,
 fr_id  set<text>,
 PRIMARY KEY (usr_id)
 );
+```
+vt_user_frs
+
+
+
+(select)
+where we are using?
+
+When a  user does a Post , then we will fetch all his friends from vt_user_frs.
+
+For all these friends  we create an entry in vt_frs_posts.
+
+
+INSERT
+
+
+UPDATE
+
+
+DELETE 
+
+
+```
+
+
 
 
 create table vt_my_posts
