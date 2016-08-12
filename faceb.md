@@ -43,6 +43,12 @@ pst_dt timestamp,
 PRIMARY KEY ((usr_id),pst_dt,pst_id)
 ) WITH CLUSTERING ORDER BY (pst_dt DESC,pst_id desc);
 
+
+```
+When user comes to his profile page
+
+```
+
 create table vt_frs_posts
 (
 usr_id text,
@@ -52,14 +58,15 @@ PRIMARY KEY ((usr_id),pst_dt,pst_id)
 ) WITH CLUSTERING ORDER BY (pst_dt DESC,pst_id desc);
 
 
+```
 
-create table vt_usr_posts
-(
-pst_id  uuid,
-usr_id text,
-pst_dt timestamp,
-primary key((usr_id),pst_dt,pst_id)
-) WITH CLUSTERING ORDER BY (pst_dt DESC,pst_id desc);
+When User comes to HomePage we show his friends and his posts as well
+
+
+
+```
+
+
 
 create table vt_posts
 (
@@ -73,7 +80,10 @@ pst_date timestamp,
 primary key((pst_id),pst_dt)
 )  WITH CLUSTERING ORDER BY (pst_dt DESC);
 
+```
+This table holds the details of the User Posts.
 
+```
 
 
 
