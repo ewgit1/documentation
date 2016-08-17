@@ -88,7 +88,16 @@ This table holds the details of the User Posts.
 
 ```
 
-
+create table w_usr_noti
+(
+usr_id text,
+pst_id uuid,
+pst_usr text,
+pst_ts timestamp,
+vw_flg boolean,
+noti_txt text,
+primary key((usr_id),vw_flg)
+)
 
 
 
