@@ -77,6 +77,9 @@ pst_img set<text>,
 pst_vid set<text>,
 pst_crt_by text,
 pst_date timestamp,
+pst_feel text,
+pst_tgt text,
+pst_tag_frs SET<text>,
 primary key((pst_id),pst_dt)
 )  WITH CLUSTERING ORDER BY (pst_dt DESC);
 
