@@ -72,5 +72,13 @@ dlike_cnt counter,
 primary key (qry_id,cmnt_id)
 );
 
+create table vt_qry_cats
+(
+cat_id uuid,
+cat_name text,
+cat_desc text,
+crt_ts timestamp
+primary key (cat_name,cat_id)
+);
 
 
