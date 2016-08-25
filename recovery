@@ -67,3 +67,7 @@ INSERT INTO vt_usr_lgn(usr_id, crt_dt, dsp_nm, is_act, pwd) VALUES ('dvbydt2', '
 INSERT INTO vt_usr_lgn(usr_id, crt_dt, dsp_nm, is_act, pwd) VALUES ('dvbydt3', '2013-06-06 05:30:00', 'dvbydt3', 'true', 'dvbydt3');
 insert into vt_user_frs(usr_id,fr_id) values('sarju',{'dvbydt1','dvbydt2'});
 insert into vt_user_frs(usr_id,fr_id) values('dvbydt1',{'sarju','dvbydt2'});
+
+
+INSERT INTO vt_usr_lgn (usr_id,crt_dt,dsp_nm,is_act,pwd) VALUES ('sarju',1472102860334,'sarju','true','4630ca54b2a97b637a77c733d44bf0f6');
+INSERT INTO vt_usr_lgn (usr_id,crt_dt,dsp_nm,is_act,pwd) VALUES ('ew1',1472102785300,'ew1','true','5fbcb25fa495d6cbbdef9b5b5ed5eee3');
