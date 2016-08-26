@@ -71,3 +71,19 @@ insert into vt_user_frs(usr_id,fr_id) values('dvbydt1',{'sarju','dvbydt2'});
 
 INSERT INTO vt_usr_lgn (usr_id,crt_dt,dsp_nm,is_act,pwd) VALUES ('sarju',1472102860334,'sarju','true','4630ca54b2a97b637a77c733d44bf0f6');
 INSERT INTO vt_usr_lgn (usr_id,crt_dt,dsp_nm,is_act,pwd) VALUES ('ew1',1472102785300,'ew1','true','5fbcb25fa495d6cbbdef9b5b5ed5eee3');
+
+CREATE TABLE vt_usr_crs_bmrk (
+	usr_id text,
+	itm_id text,
+	crs_id text,
+	itm_typ text,
+	bmrk_flg boolean,
+	bmrk_ts timestamp,
+	PRIMARY KEY ((usr_id,crs_id),itm_id)
+);
+
+
+
+
+
+
