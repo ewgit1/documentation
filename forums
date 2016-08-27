@@ -78,7 +78,7 @@ cat_id uuid,
 cat_name text,
 cat_desc text,
 crt_ts timestamp,
-primary key (cat_name,cat_id)
+primary key (cat_id)
 );
 
 
