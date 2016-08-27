@@ -95,5 +95,26 @@ qry_vws counter,
 primary key (qry_id) 
 );
 
+create table ew_qry_usr_stats
+(
+qry_id uuid,
+usr_id text,
+like_dlike_flg  boolean,
+qry_shr  boolean,
+qry_flw boolean,
+qry_vws  boolean,
+qry_ans boolean,
+crt_ts timestamp,
+primary key(qry_id,usr_id)
+);
 
+
+create table ew_qry_usr_stats_cnt
+(
+qry_id uuid,
+usr_id text,
+qry_vws  counter,
+qry_ans counter,
+primary key(qry_id,usr_id)
+);
 
