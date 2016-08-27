@@ -82,3 +82,18 @@ primary key (cat_name,cat_id)
 );
 
 
+
+create table ew_qry_stats
+(
+qry_id  uuid,
+qry_upv counter,
+qry_dnv counter,
+qry_ans counter ,
+qry_shr counter,
+qry_flw counter,
+qry_vws counter,
+primary key (qry_id) 
+);
+
+
+
