@@ -4,6 +4,7 @@ usr_id  text primary key,
 usr_email text ,
 usr_ph text,
 dsp_nm text,
+pwd text,
 reg_dt timestamp
 );
 
@@ -14,6 +15,7 @@ usr_email text ,
 usr_ph text,
 otp  text ,
 otp_exp_tm int,
+pwd text,
 otp_snt_dt timestamp
 );
 
@@ -30,6 +32,15 @@ dsp_nm text,
 pwd  text,
 is_act text,
 crt_dt timestamp
+);
+
+
+create table ew_usr_shrt_dtls
+(
+usr_id      text primary key,
+dsp_nm  text,
+usr_email   text,
+usr_pic text
 );
 
 
