@@ -118,3 +118,35 @@ qry_ans counter,
 primary key(qry_id,usr_id)
 );
 
+create table ew_qry_flw
+(
+usr_id text,
+qry_id uuid,
+flw_ts timestamp,
+primary key( (qry_id),usr_id)
+)
+
+
+create table ew_qry_flw_ntf
+(
+usr_id text,
+qry_id uuid,
+ans_usr_id text,
+ans_ts timestamp,
+ntf_vw_flg boolean,
+primary key((usr_id), ans_usr_id , ans_ts )
+)
+
+
+create table ew_qry_ans_ltr
+(
+usr_id text,
+qry_id uuid,
+crt_ts timestamp,
+ans_flg boolean,
+primary key((usr_id), qry_id)
+);
+
+
+
+
