@@ -131,6 +131,7 @@ create table ew_qry_flw_ntf
 (
 usr_id text,
 qry_id uuid,
+ans_id uuid,
 ans_usr_id text,
 ans_ts timestamp,
 ntf_vw_flg boolean,
