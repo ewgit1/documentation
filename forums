@@ -147,6 +147,14 @@ ans_flg boolean,
 primary key((usr_id), qry_id)
 );
 
+create table ew_cmpln
+(
+usr_id text,
+cmpln_typ text ,
+cmpln_id uuid,
+cmpln_ts timestamp,
+primary key(usr_id,cmpln_ts) 
+) with clustering order by(cmpln_ts desc)
 
 
 
