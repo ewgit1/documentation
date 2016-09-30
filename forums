@@ -169,5 +169,14 @@ del_ts timestamp,
 primary key(usr_id,del_ts) 
 ) with clustering order by(del_ts desc)
 
-
+create table ew_contact_msgs
+(
+msg_id uuid,
+fst_nm  text,
+email text,  
+ph_no text,
+msg  text,
+qry_ts timestamp,
+PRIMARY KEY (msg_id )
+);
 
