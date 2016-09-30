@@ -176,7 +176,7 @@ fst_nm  text,
 email text,  
 ph_no text,
 msg  text,
-qry_ts timestamp,
+msg_ts timestamp,
 PRIMARY KEY (msg_id )
 );
 
