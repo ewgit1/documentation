@@ -121,8 +121,20 @@ usr_id text,
 fr_id text,
 req_dt timestamp,
 req_sts text,
-primary key((usr_id),fr_id)
+primary key((usr_id),fr_id))
 );
+
+create table ew_fr_req_rcvd
+(
+usr_id text,
+fr_id text,
+req_dt timestamp,
+req_sts text,
+primary key((fr_id),usr_id)
+);
+
+
+
 
 
 
