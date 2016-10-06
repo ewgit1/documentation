@@ -99,5 +99,21 @@ noti_txt text,
 primary key((usr_id),vw_flg)
 )
 
+create table ew_rec_frs
+(
+usr_id text,
+fr_id text,
+add_dt timestamp,
+primary key((usr_id),fr_id)
+);
+
+
+insert into ew_rec_frs(usr_id,fr_id,add_dt) values('ew1','hr',toTimestamp(now()));
+insert into ew_rec_frs(usr_id,fr_id,add_dt) values('sarju','hr',toTimestamp(now()));
+insert into ew_rec_frs(usr_id,fr_id,add_dt) values('sarju','ew1',toTimestamp(now()));
+insert into ew_rec_frs(usr_id,fr_id,add_dt) values('hr','ew1',toTimestamp(now()));
+
+
+
 
 
