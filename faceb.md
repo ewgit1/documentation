@@ -110,10 +110,10 @@ primary key((usr_id),fr_id)
 );
 
 
-insert into ew_rec_frs(usr_id,fr_id,add_dt) values('ew1','hr',toTimestamp(now()));
-insert into ew_rec_frs(usr_id,fr_id,add_dt) values('sarju','hr',toTimestamp(now()));
-insert into ew_rec_frs(usr_id,fr_id,add_dt) values('sarju','ew1',toTimestamp(now()));
-insert into ew_rec_frs(usr_id,fr_id,add_dt) values('hr','ew1',toTimestamp(now()));
+insert into ew_rec_frs(usr_id,fr_id,add_dt,fr_req_snt) values('ew1','hr',toTimestamp(now()),'N');
+insert into ew_rec_frs(usr_id,fr_id,add_dt,fr_req_snt) values('sarju','hr',toTimestamp(now()),'N');
+insert into ew_rec_frs(usr_id,fr_id,add_dt,fr_req_snt) values('sarju','ew1',toTimestamp(now()),'N');
+insert into ew_rec_frs(usr_id,fr_id,add_dt,fr_req_snt) values('hr','ew1',toTimestamp(now()),'N');
 
 create table ew_fr_reqs
 (
