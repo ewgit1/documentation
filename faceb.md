@@ -115,13 +115,13 @@ insert into ew_rec_frs(usr_id,fr_id,add_dt,fr_req_snt) values('sarju','hr',toTim
 insert into ew_rec_frs(usr_id,fr_id,add_dt,fr_req_snt) values('sarju','ew1',toTimestamp(now()),'N');
 insert into ew_rec_frs(usr_id,fr_id,add_dt,fr_req_snt) values('hr','ew1',toTimestamp(now()),'N');
 
-create table ew_fr_reqs
+create table ew_fr_req_snt
 (
 usr_id text,
 fr_id text,
 req_dt timestamp,
 req_sts text,
-primary key((usr_id),fr_id))
+primary key((usr_id),fr_id)
 );
 
 create table ew_fr_req_rcvd
@@ -134,8 +134,33 @@ primary key((fr_id),usr_id)
 );
 
 
+create table ew_frs
+(
+usr_id text,
+fr_id text,
+req_dt timestamp,
+primary key((fr_id),usr_id)
+);
 
 
+
+
+
+create table ew_cb_my_flw
+(
+usr_id text,
+flw_id set<text>,
+flw_dt timestamp,
+primary key(usr_id)
+);
+
+create table ew_cb_i_flw
+(
+usr_id text,
+flw_id set<text>,
+flw_dt timestamp,
+primary key((fr_id),usr_id)
+);
 
 
 
