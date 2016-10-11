@@ -43,6 +43,7 @@ usr_email   text,
 usr_pic text
 );
 
+
 create table ew_usr_dtls
 (
 usr_id  text ,
@@ -57,10 +58,10 @@ dob_mn  MAP<text,text>,
 dob_yr  MAP<text,text>,
 cty     MAP<text,text>,
 ctry    MAP<text,text>,
+zip_cd  MAP<text,text>,
 ph      MAP<text,text>,
 ph_nv      MAP<text,text>,primary key(usr_id)
 );
-
 
 
 
