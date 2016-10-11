@@ -48,21 +48,30 @@ create table ew_usr_dtls
 (
 usr_id  text ,
 usr_abt_me text,
-fst_nm  MAP<text,text>,
-lst_nm  MAP<text,text>,
-dsp_nm  MAP<text,text>,
+usr_abt_me_flg  text,
+fst_nm  text,
+fst_nm_flg  text,
+lst_nm  text,
+lst_nm_flg  text,
+dsp_nm  text,
+dsp_nm_flg  text,
+dob_dt  text,
+dob_dt_flg  text,
+dob_mn text,
+dob_mn_flg text,
+dob_yr text,
+dob_yr_flg text,
+cty     text,
+cty_flg     text,
+ctry    text,
+ctry_flg    text,
+zip_cd  text,
+zip_cd_flg  text,
 email   MAP<text,text>,
 email_nv MAP<text,text>,
-dob_dt  MAP<text,text>,
-dob_mn  MAP<text,text>,
-dob_yr  MAP<text,text>,
-cty     MAP<text,text>,
-ctry    MAP<text,text>,
-zip_cd  MAP<text,text>,
 ph      MAP<text,text>,
 ph_nv      MAP<text,text>,primary key(usr_id)
 );
-
 
 
 
