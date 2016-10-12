@@ -81,4 +81,32 @@ usr_ph MAP<text,text>,
 reg_dt timestamp
 );
 
+create table ew_usr_work_dtls
+(
+usr_id  text ,
+usr_wrk_sk   uuid, 
+comp_nm text,
+role text,
+loc text,
+frm_dt text,
+to_dt text,
+comp_desc text,
+primary key(usr_id,usr_wrk_sk)
+);
+
+
+create table ew_usr_edu_dtls
+(
+usr_id  text ,
+usr_wrk_sk   uuid, 
+edu_nm text,
+loc text,
+edu_lvl  text,
+frm_dt text,
+to_dt text,
+edu_desc text,
+primary key(usr_id,usr_wrk_sk)
+);
+
+
 
