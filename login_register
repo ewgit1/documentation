@@ -91,6 +91,7 @@ loc text,
 frm_dt text,
 to_dt text,
 comp_desc text,
+work_flg text,
 primary key(usr_id,usr_wrk_sk)
 );
 
@@ -105,8 +106,6 @@ edu_lvl  text,
 frm_dt text,
 to_dt text,
 edu_desc text,
+edu_flg text,
 primary key(usr_id,usr_wrk_sk)
 );
-
-
-
