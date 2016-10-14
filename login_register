@@ -139,3 +139,13 @@ crs_flg text,
 crt_dt  timestamp,
 primary key(usr_id,usr_crs_sk)
 );
+
+create table ew_usr_author_dtl
+(
+usr_id text,
+author_desc text,
+usr_bk_sk   uuid, 
+crs_bk_nm text,
+crs_bk_desc text,
+primary key(usr_id,usr_bk_sk)
+);
