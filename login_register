@@ -149,3 +149,22 @@ crs_bk_nm text,
 crs_bk_desc text,
 primary key(usr_id,usr_bk_sk)
 );
+
+create table ew_usr_parent_kid
+(
+usr_id text,
+kid_usr_id text,
+kid_edu_nm text,
+kid_exm_nm set<text>,
+primary key(usr_id,kid_usr_id)
+)
+
+create table ew_usr_tch_dtl
+(
+usr_id text,
+tch_crs_sk uuid,
+tch_desc text,
+edu_nm  text,
+tch_crs  text,
+primary key(usr_id,tch_crs_sk)
+);
