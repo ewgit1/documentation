@@ -125,6 +125,7 @@ usr_id text,
 usr_exm_sk   uuid, 
 exm_nm text,
 tgt_yr text,
+exm_flg  text,
 crt_dt  timestamp,
 primary key(usr_id,usr_exm_sk)
 );
@@ -134,6 +135,7 @@ create table ew_usr_crs_dtls
 usr_id text,
 usr_crs_sk   uuid, 
 crs_nm text,
+crs_flg text,
 crt_dt  timestamp,
 primary key(usr_id,usr_crs_sk)
 );
