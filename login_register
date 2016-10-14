@@ -5,6 +5,7 @@ usr_email text ,
 usr_ph text,
 dsp_nm text,
 pwd text,
+role text,
 reg_dt timestamp
 );
 
@@ -76,7 +77,9 @@ ht_zip_cd_flg  text,
 email   MAP<text,text>,
 email_nv MAP<text,text>,
 ph      MAP<text,text>,
-ph_nv      MAP<text,text>,primary key(usr_id)
+ph_nv      MAP<text,text>,
+role text,
+primary key(usr_id)
 );
 
 create table ew_usr_contact_dtls
