@@ -79,9 +79,32 @@ pst_crt_by text,
 pst_mfy_date timestamp,
 pst_feel text,
 pst_tgt text,
+pst_typ text,
+pst_shr_txt text,
 pst_tag_frs SET<text>,
 primary key(pst_id)
 ) ;
+
+CREATE TABLE ew1.vt_posts_crt_by (
+    pst_crt_by text,
+    pst_tgt text,
+    pst_id uuid,
+    pst_dt timestamp,
+    pst_feel text,
+    pst_img set<text>,
+    pst_mfy_date timestamp,
+    pst_msg text,
+    pst_tag_frs set<text>,
+    pst_typ text,
+    pst_shr_txt text,
+    pst_vid set<text>,
+    PRIMARY KEY ((pst_crt_by, pst_tgt), pst_id)
+) WITH CLUSTERING ORDER BY (pst_id ASC)
+
+
+
+
+
 
 ```
 This table holds the details of the User Posts.
