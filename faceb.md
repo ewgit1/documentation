@@ -82,6 +82,8 @@ pst_tgt text,
 pst_typ text,
 pst_shr_txt text,
 pst_tag_frs SET<text>,
+pst_qry_id uuid,
+pst_qry_desc text,
 primary key(pst_id)
 ) ;
 
@@ -98,6 +100,8 @@ CREATE TABLE ew1.vt_posts_crt_by (
     pst_typ text,
     pst_shr_txt text,
     pst_vid set<text>,
+    pst_qry_id uuid,
+pst_qry_desc text,
     PRIMARY KEY ((pst_crt_by, pst_tgt), pst_id)
 ) WITH CLUSTERING ORDER BY (pst_id ASC)
 
