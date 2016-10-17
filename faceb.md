@@ -192,4 +192,26 @@ primary key((fr_id),usr_id)
 
 
 
+create table ew_pst_like_stats
+(
+pst_id uuid,
+like_cnt counter,
+love_cnt counter,
+haha_cnt counter,
+wow_cnt counter,
+sad_cnt counter,
+angry_cnt counter,
+dlike_cnt counter,
+primary key (pst_id)
+);
+
+create table ew_pst_like
+(
+pst_id uuid,
+usr_id text,
+like_typ  text,
+crt_ts timestamp,
+primary key(pst_id,usr_id)
+);
+
 
