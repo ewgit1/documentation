@@ -221,8 +221,8 @@ to_usr_id text,
 noti_msg text,
 noti_vw_flg text,
 snt_ts  timestamp,
-primary key((to_usr_id),snt_ts,frm_usr_id)
-) WITH CLUSTERING ORDER BY(snt_ts desc,frm_usr_id desc)
+primary key((to_usr_id),frm_usr_id)
+)
 
 
 
