@@ -224,6 +224,15 @@ snt_ts  timestamp,
 primary key((to_usr_id),frm_usr_id)
 )
 
-
+create table ew_pst_tag_noti
+(
+frm_usr_id text,
+pst_id uuid, 
+to_usr_id text,
+noti_msg text,
+noti_vw_flg text,
+snt_ts  timestamp,
+primary key((to_usr_id),pst_id,frm_usr_id)
+)
 
 
