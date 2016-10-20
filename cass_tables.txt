@@ -47,6 +47,7 @@ drop table vt_frs_chat_d;
 create table vt_frs_chat_d
 (
 msg_id timeuuid,
+frm_usr text,
 comb_id text,
 msg text,
 msg_ts   timestamp,
