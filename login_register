@@ -168,3 +168,35 @@ edu_nm  text,
 tch_crs  text,
 primary key(usr_id,tch_crs_sk)
 );
+
+create table ew_emp_typs(
+typ_id uuid,
+typ_desc text,
+primary key(typ_id)
+);
+
+create table ew_emp_dtls
+(
+emp_id bigint,
+typ text,
+fst_nm text,
+lst_nm text,
+mdl_nm text,
+ph_no set<text>,
+adress text,
+experties set<text>,
+primary key(emp_id)
+);
+
+create table ew_bat_dtls
+(
+bat_id  bigint, 
+faculty_id set<bigint>, 
+cls_start_dt  timestamp,
+cls_tim  text,
+bat_crs_price MAP<text,decimal>,
+discount  decimal,
+msg text ,
+last_class_video text,
+primary key(bat_id)
+);
