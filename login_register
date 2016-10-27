@@ -178,7 +178,7 @@ primary key(typ_id)
 create table ew_emp_dtls
 (
 emp_id bigint,
-typ text,
+typ_id uuid,
 fst_nm text,
 lst_nm text,
 mdl_nm text,
