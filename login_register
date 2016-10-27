@@ -192,8 +192,10 @@ create table ew_bat_dtls
 (
 bat_id  bigint, 
 faculty_id set<bigint>, 
+crs_id text,
 cls_start_dt  timestamp,
-cls_tim  text,
+cls_frm_tm  text,
+cls_to_tm  text,
 bat_crs_price MAP<text,decimal>,
 discount  decimal,
 msg text ,
