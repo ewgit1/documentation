@@ -188,6 +188,23 @@ experties set<text>,
 primary key(emp_id)
 );
 
+create table ew_bat_crs_m
+(
+crs_id text primary key,
+no_of_days int
+);
+
+
+create table ew_bat_m
+(
+bat_id  bigint, 
+crs_id text,
+cls_start_dt timestamp,
+crt_dt timestamp,
+primary key((crs_id),bat_id)
+) WITH CLUSTERING ORDER BY(bat_id desc);
+
+
 create table ew_bat_dtls
 (
 bat_id  bigint, 
