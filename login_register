@@ -219,3 +219,20 @@ msg text ,
 last_class_video text,
 primary key(bat_id)
 );
+
+create table ew_bat_sess_dtls
+(
+bat_id  bigint,  
+sess_id  bigint, 
+sess_dt timestamp,
+sess_items MAP<text,text>,
+primary key(bat_id,sess_id)
+);
+
+
+
+
+
+
+
+
