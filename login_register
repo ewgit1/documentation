@@ -235,7 +235,7 @@ usr_id   text,
 training_id text,
 bat_id text,
 buy_dt timestamp,
-pay_id timestamp,
+pay_id text,
 pay_method  text,
 pay_status text,
 primary key(usr_id   ,training_id,bat_id)
