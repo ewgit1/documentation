@@ -241,15 +241,17 @@ pay_status text,
 primary key(usr_id   ,training_id,bat_id)
 );
 
-ew_crs_access
+create table ew_crs_access
 (
-usr_id
-training_id
-crs_id 
-privilege ( group of privileges)
-start_dt
-end_dt
-)
+usr_id text,
+training_id text,
+bndl_id text,
+crs_id  text,
+privilege text,
+start_dt timestamp,
+end_dt timestamp,
+primary key(usr_id,crs_id)
+);
 
 
 
