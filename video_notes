@@ -1,0 +1,23 @@
+create table ew_vdo_note_mdls
+(
+usr_id text,
+crs_id text,
+crs_nm text,
+mdl_id text,
+mdl_nm text,
+primary key((usr_id,crs_id),mdl_id)
+);
+
+
+create table ew_vdo_notes
+(
+usr_id text,
+crs_id text,
+mdl_id text,
+vdo_id text,
+vdo_note_id uuid,
+vdo_note text,
+vdo_tm text,
+crt_dt timestamp,
+primary key((usr_id,mdl_id),vdo_note_id)
+) ;
