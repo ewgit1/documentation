@@ -1,0 +1,23 @@
+create table ew_usr_vdo_cmnt_m(
+pst_id 		text,
+cb_pst_id  uuid,
+usr_id 		text,
+crt_dt timestamp,
+PRIMARY KEY((usr_id,pst_id))
+);
+
+
+create table ew_usr_vdo_cmnt(
+pst_id 		text,
+usr_id 		text,
+cmnt_id 	uuid,
+cmnt_txt text,
+cmnt_img  SET<text>,
+cmnt_atch  SET<text>,
+cmnt_vid  SET<text>,
+cmnt_lvl  text,
+cmnt_cmnt_id uuid,
+cmnt_ts timestamp,
+PRIMARY KEY((pst_id),cmnt_ts ,cmnt_id)
+);
+
