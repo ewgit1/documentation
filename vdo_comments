@@ -21,3 +21,23 @@ cmnt_ts timestamp,
 PRIMARY KEY((pst_id),cmnt_ts ,cmnt_id)
 );
 
+
+create table vt_itm_pst_like
+(
+pst_id text,
+cmnt_id uuid,
+usr_id text,
+like_dlike_flg  int,
+crt_ts timestamp,
+primary key((pst_id ,usr_id),cmnt_id)
+);
+
+create table vt_itm_like_stats
+(
+pst_id text,
+cmnt_id uuid ,
+like_cnt counter,
+dlike_cnt counter,
+primary key (pst_id,cmnt_id)
+);
+
