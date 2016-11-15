@@ -1,4 +1,13 @@
 
+
+create table ew_itm_qrys
+(
+itm_id  text,
+itm_typ text,
+qry_id  uuid,
+primary key(itm_id,qry_id)
+);
+
 create table vt_forum_qrys
 (
 qry_id uuid,
