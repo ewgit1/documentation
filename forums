@@ -62,15 +62,6 @@ crt_ts timestamp,
 primary key((qry_id,usr_id),cmnt_id)
 );
 
-create table vt_qry_like
-(
-qry_id uuid,
-cmnt_id uuid,
-usr_id text
-like_dlike_flg  int
-crt_ts timestamp,
-primary key(qry_id,usr_id),cmnt_id)
-);
 
 
 create table vt_qry_like_stats
