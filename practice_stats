@@ -42,3 +42,44 @@ PRIMARY KEY (tst_id)
 
 
 
+create table ew_usr_tests_m
+(
+tst_id  uuid,
+usr_id text,
+tst_strt_tm timestamp,
+tst_end_tm timestamp,
+primary key(usr_id,tst_id)
+);
+
+
+
+create  table ew_usr_tests_dtl
+(
+tst_id  uuid,
+usr_id text,
+que_id text,
+tpc_id text,
+mdl_id text,
+crs_id text,
+que_ans MAP<text,boolean>,
+que_strt_tm timestamp,
+que_end_tm timestamp,
+primary key(tst_id,que_id)
+);
+
+
+
+create  table ew_usr_tests_review
+(
+tst_id  uuid,
+usr_id text,
+que_id text,
+tpc_id text,
+mdl_id text,
+crs_id text,
+wrg_rsn set<text>,
+primary key(tst_id,que_id)
+);
+
+
+
