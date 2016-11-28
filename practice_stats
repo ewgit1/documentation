@@ -78,6 +78,7 @@ tpc_id text,
 mdl_id text,
 crs_id text,
 wrg_rsn set<text>,
+usr_cmnt text,
 primary key(tst_id,que_id)
 );
 
