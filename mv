@@ -1,0 +1,9 @@
+
+
+CREATE MATERIALIZED VIEW  ew1.vt_qry_like_usrs
+as select usr_id  from ew1.vt_qry_like  where qry_id  is not null and  usr_id is not null and cmnt_id is not null
+PRIMARY KEY ((cmnt_id),qry_id,usr_id );
+
+CREATE MATERIALIZED VIEW ew1.vt_itm_pst_like_usrs
+as select usr_id  from ew1.vt_itm_pst_like where pst_id is not null and  usr_id is not null and cmnt_id is not null
+PRIMARY KEY ((cmnt_id),pst_id,usr_id );
