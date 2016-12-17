@@ -1,0 +1,12 @@
+create table ew_apply_job
+(
+job_id  text ,
+usr_nn text,
+usr_email text,
+usr_ph text,
+usr_edu  text,
+usr_skill text,
+usr_about_exp text,
+create_dt  timestamp,
+primary key(job_id)
+);
