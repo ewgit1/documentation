@@ -92,19 +92,23 @@ go_to_pg text,
 usr_id text,
 tkn text,
 login_tkn text,
+offset text,
+key  text,
+partition text,
 clk_tm timestamp
 )
 
-create table usr_idel_stats
+create table usr_idle_stats
 (
 idl_id uuid primary key,
-link_nm text,
-tag_typ text,
-curr_pg text,
-go_to_pg text,
+idl_msg text,
+idl_rsn text,
 usr_id text,
 tkn text,
 login_tkn text,
+offset text,
+key  text,
+partition text,
 clk_tm timestamp
 )
 
