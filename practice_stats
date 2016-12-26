@@ -82,5 +82,29 @@ usr_cmnt text,
 primary key(tst_id,que_id)
 );
 
+create table usr_click_stats
+(
+clk_id uuid primary key,
+link_nm text,
+tag_typ text,
+curr_pg text,
+go_to_pg text,
+usr_id text,
+tkn text,
+login_tkn text,
+clk_tm timestamp
+)
 
+create table usr_idel_stats
+(
+idl_id uuid primary key,
+link_nm text,
+tag_typ text,
+curr_pg text,
+go_to_pg text,
+usr_id text,
+tkn text,
+login_tkn text,
+clk_tm timestamp
+)
 
