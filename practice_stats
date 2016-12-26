@@ -103,6 +103,7 @@ create table usr_idle_stats
 idl_id uuid primary key,
 idl_msg text,
 idl_rsn text,
+curr_pg text,
 usr_id text,
 tkn text,
 login_tkn text,
