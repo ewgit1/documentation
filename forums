@@ -15,7 +15,7 @@ usr_id text ,
 qry_title text,
 qry_txt text,
 qry_ts timestamp,
-qry_tags SET<text>,
+qry_tags SET<uuid>,
 qry_pst_id uuid,
 PRIMARY KEY (qry_id)
 );
